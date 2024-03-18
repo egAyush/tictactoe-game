@@ -5,10 +5,9 @@ import StatusMessage from './components/StatusMessage';
 import History from './components/History';
 import Board from './components/board';
 
+const NEW_GAME = [{ squares: Array(9).fill(null), isXnext: false }];
 function App() {
-  const [history, setHistory] = useState([
-    { squares: Array(9).fill(null), isXnext: false },
-  ]);
+  const [history, setHistory] = useState(NEW_GAME);
 
   const [currentMove, setCurrentMove] = useState(0);
   const gamingBoard = history[currentMove];
